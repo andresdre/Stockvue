@@ -4,7 +4,7 @@ import { Outlet } from "react-router-dom";
 import { createPageUrl } from "@/utils";
 import { BarChart3, TrendingUp, Briefcase, Eye, Search, Bell, Settings, Sun, Moon, Newspaper } from "lucide-react";
 import { Sidebar, SidebarContent, SidebarGroup, SidebarGroupContent, SidebarGroupLabel, SidebarMenu, SidebarMenuButton, SidebarMenuItem, SidebarHeader, SidebarFooter, SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/Components/ui/button";
 
 const navigationItems = [
   {

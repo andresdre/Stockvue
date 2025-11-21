@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowLeft, TrendingUp, TrendingDown, Plus, Eye } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Skeleton } from '@/components/ui/skeleton';
+import { Button } from '../Components/ui/button';
+import { Skeleton } from '../Components/ui/skeleton';
 import { createPageUrl } from '@/utils';
 
 import Stock from '../Entities/Stock';
