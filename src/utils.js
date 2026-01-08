@@ -1,8 +1,16 @@
 // src/utils.js
-export const createPageUrl = (pageName) => `/${pageName}`;
 
-// Format numbers like 12345.67 → "12,345.67"
-export function formatNumber(value, decimals = 2) {
+// Build a URL with query parameters
+// Example:
+// createPageUrl("/stocks", { page: 2, sort: "asc" })
+// → "/stocks?page=2&sort=asc"
+export function createPageUrl(base, params = {}) {
+    const query = new URLSearchParams(params).toString();
+    return query ? `${base}?${query}` : base;
+  }
+  
+  // Format numbers like 12345.67 → "12,345.67"
+  export function formatNumber(value, decimals = 2) {
     if (value === null || value === undefined) return "-";
     return Number(value).toLocaleString("en-US", {
       minimumFractionDigits: decimals,
@@ -25,12 +33,13 @@ export function formatNumber(value, decimals = 2) {
     return `${(value * 100).toFixed(decimals)}%`;
   }
   
-  // Check if a value is rising or falling
+  // Check if a value is positive (useful for green/red UI)
   export function isPositive(value) {
     return Number(value) >= 0;
   }
   
-  // Add a delay (useful for testing loading states)
+  // Add a delay (useful for simulating API loading)
   export function wait(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
   }
+  
