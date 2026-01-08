@@ -1,12 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { TrendingUp, Briefcase, Eye, Bell } from "lucide-react";
-import { Button } from "../Components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "../Components/ui/card";
+import { Button } from "@/Components/ui/button.jsx";
+import { Card, CardContent, CardHeader, CardTitle } from "@/Components/ui/card.jsx";
 
-import MarketOverview from "../Components/Dashboard/MarketOverview";
-import TopMovers from "../Components/Dashboard/TopMovers";
-import MarketChart from "../Components/Dashboard/MarketChart";
+import MarketOverview from "@/Components/Dashboard/MarketOverview.jsx";
+import TopMovers from "@/Components/Dashboard/TopMovers.jsx";
+import MarketChart from "@/Components/Dashboard/MarketChart.jsx";
 
 export default function Dashboard() {
   return (

@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import Watchlist from "../Entities/Watchlist";
+import Watchlist from "@/Entities/Watchlist.jsx";
 import { Eye, Plus, Trash2, Target, TrendingUp, TrendingDown } from "lucide-react";
-import { Button } from "../Components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "../Components/ui/card";
-import { Input } from "../Components/ui/input";
-import { Label } from "../Components/ui/label";
-import { Textarea } from "../Components/ui/textarea";
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "../Components/ui/dialog";
+import { Button } from "@/Components/ui/button.jsx";
+import { Card, CardContent, CardHeader, CardTitle } from "@/Components/ui/card.jsx";
+import { Input } from "@/Components/ui/input.jsx";
+import { Label } from "@/Components/ui/label.jsx";
+import { Textarea } from "@/Components/ui/textarea.jsx";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/Components/ui/dialog.jsx";
 
 // Mock current prices for demonstration
 const mockPrices = {

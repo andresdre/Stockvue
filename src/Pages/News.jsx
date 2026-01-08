@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { News } from '../Entities/News';
-import NewsList from '../Components/News/NewsList';
-import { Skeleton } from '../Components/ui/skeleton';
+import { News } from '@/Entities/News.jsx';
+import NewsList from '@/Components/News/NewsList.jsx';
+import { Skeleton } from '@/Components/ui/skeleton.jsx';
 
 export default function NewsPage() {
   const [news, setNews] = useState([]);

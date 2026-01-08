@@ -2,17 +2,17 @@ import React, { useState, useEffect } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowLeft, TrendingUp, TrendingDown, Plus, Eye } from 'lucide-react';
-import { Button } from '../Components/ui/button';
-import { Skeleton } from '../Components/ui/skeleton';
+import { Button } from '@/Components/ui/button.jsx';
+import { Skeleton } from '@/Components/ui/skeleton.jsx';
 import { createPageUrl } from '@/utils';
 
-import Stock from '../Entities/Stock';
-import News from '../Entities/News';
-import StockChartAdvanced from '../Components/StockDetails/StockChartAdvanced';
-import KeyStats from '../Components/StockDetails/KeyStats';
-import CompanyProfile from '../Components/StockDetails/CompanyProfile';
-import AnalystRatings from '../Components/StockDetails/AnalystsRatings'
-import NewsList from '../Components/News/NewsList';
+import Stock from '@/Entities/Stock.jsx';
+import News from '@/Entities/News.jsx';
+import StockChartAdvanced from '@/Components/StockDetails/StockChartAdvanced.jsx';
+import KeyStats from '@/Components/StockDetails/KeyStats.jsx';
+import CompanyProfile from '@/Components/StockDetails/CompanyProfile.jsx';
+import AnalystRatings from '@/Components/StockDetails/AnalystsRatings.jsx';
+import NewsList from '@/Components/News/NewsList.jsx';
 
 export default function StockDetails() {
   const location = useLocation();

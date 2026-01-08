@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import Portfolio from "../Entities/Portfolio";
+import Portfolio from "@/Entities/Portfolio.jsx";
 import { TrendingUp, TrendingDown, Plus, Trash2, Edit3 } from "lucide-react";
-import { Button } from "../Components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "../Components/ui/card";
-import { Badge } from "../Components/ui/badge";
-import { Input } from "../Components/ui/input";
-import { Label } from "../Components/ui/label";
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "../Components/ui/dialog";
+import { Button } from "@/Components/ui/button.jsx";
+import { Card, CardContent, CardHeader, CardTitle } from "@/Components/ui/card.jsx";
+import { Badge } from "@/Components/ui/badge.jsx";
+import { Input } from "@/Components/ui/input.jsx";
+import { Label } from "@/Components/ui/label.jsx";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/Components/ui/dialog.jsx";
 
 export default function PortfolioPage() {
   const [holdings, setHoldings] = useState([]);

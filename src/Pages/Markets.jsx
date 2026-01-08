@@ -3,11 +3,11 @@ import { motion } from "framer-motion";
 import { Search, TrendingUp, TrendingDown, Plus, Eye, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { createPageUrl } from "@/utils";
-import { Button } from "../Components/ui/button";
-import { Input } from "../Components/ui/input";
-import { Card, CardContent, CardHeader, CardTitle } from "../Components/ui/card";
-import { Badge } from "../Components/ui/badge";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "../Components/ui/tabs";
+import { Button } from "@/Components/ui/button.jsx";
+import { Input } from "@/Components/ui/input.jsx";
+import { Card, CardContent, CardHeader, CardTitle } from "@/Components/ui/card.jsx";
+import { Badge } from "@/Components/ui/badge.jsx";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/Components/ui/tabs.jsx";
 
 const stockData = [
   {
