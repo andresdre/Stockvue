@@ -1,5 +1,13 @@
+// src/components/ui/label.jsx
 import React from "react";
+import PropTypes from "prop-types";
+export function Label({ className = "", ...props }) {
+  return <label className={`block text-sm font-medium text-gray-700 ${className}`} {...props} />;
+}
 
-export const Label: React.FC<React.LabelHTMLAttributes<HTMLLabelElement>> = (props) => (
-  <label className="block text-sm font-medium text-gray-700" {...props} />
-);
+Label.propTypes = {
+  className: PropTypes.string,
+  children: PropTypes.node,
+};
+
+export default Label;

@@ -3,8 +3,8 @@ import { Link, useLocation, } from "react-router-dom";
 import { Outlet } from "react-router-dom";
 import { createPageUrl } from "@/utils";
 import { BarChart3, TrendingUp, Briefcase, Eye, Search, Bell, Settings, Sun, Moon, Newspaper } from "lucide-react";
-import { Sidebar, SidebarContent, SidebarGroup, SidebarGroupContent, SidebarGroupLabel, SidebarMenu, SidebarMenuButton, SidebarMenuItem, SidebarHeader, SidebarFooter, SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
-import { Button } from "@/Components/ui/button";
+import { Sidebar, SidebarContent, SidebarGroup, SidebarGroupContent, SidebarGroupLabel, SidebarMenu, SidebarMenuButton, SidebarMenuItem, SidebarHeader, SidebarFooter, SidebarProvider, SidebarTrigger } from "@/Components/ui/sidebar.jsx";
+import { Button } from "@/Components/ui/button.jsx";
 
 const navigationItems = [
   {
@@ -34,7 +34,7 @@ const navigationItems = [
   },
 ];
 
-export default function Layout({ children, currentPageName }) {
+export default function Layout({ asChild, children, currentPageName, ...rest }) {
   const location = useLocation();
   const [darkMode, setDarkMode] = React.useState(false);
 
@@ -114,8 +114,8 @@ export default function Layout({ children, currentPageName }) {
                 <SidebarMenu>
                   {navigationItems.map((item) => (
                     <SidebarMenuItem key={item.title}>
-                      <SidebarMenuButton 
-                        asChild 
+                      <SidebarMenuButton
+                        asChild
                         className={`rounded-xl mb-2 transition-all duration-200 ${
                           location.pathname === item.url 
                             ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-lg' 

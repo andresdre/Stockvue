@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, AreaChart, Area } from 'recharts';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/Components/ui/card.jsx';
+import { Button } from '@/Components/ui/button.jsx';
 
 // Mock data for different time ranges
 const generateData = (numPoints, startValue, volatility) => {
