@@ -11,8 +11,8 @@ import StockDetails from "@/Pages/StockDetails.jsx";
 export default function App() {
   return (
     <Routes>
-      <Route path="/" element={<Layout />}>
-        <Route index element={<Dashboard />} />
+      <Route path="/" element={<Layout />} >
+        <Route path="dashboard" element={<Dashboard />} />
         <Route path="markets" element={<Markets />} />
         <Route path="watchlist" element={<Watchlist />} />
         <Route path="portfolio" element={<Portfolio />} />

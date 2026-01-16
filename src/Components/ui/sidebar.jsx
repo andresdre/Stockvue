@@ -95,6 +95,14 @@ export const SidebarMenuItem = ({ children, className = "", ...props }) => (
 
 SidebarMenuItem.propTypes = { children: PropTypes.node, className: PropTypes.string };
 
+export const SidebarProvider = ({ children, className = "", ...props }) => (
+<div className={`px-3 py-2 rounded hover:bg-gray-100 ${className}`} {...props}>
+  {children}
+</div>
+);
+
+SidebarProvider.propTypes = { children: PropTypes.node, className: PropTypes.string };
+
 export const SidebarTrigger = ({ children, className = "", ...props }) => (
   <button className={`px-2 py-1 text-sm ${className}`} {...props}>
     {children}
