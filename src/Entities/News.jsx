@@ -1,4 +1,4 @@
-export default {
+export const News = {
     "name": "News",
     "type": "object",
     "properties": {
@@ -43,3 +43,5 @@ export default {
       "published_at"
     ]
   };
+
+export default News;

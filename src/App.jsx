@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import Layout from "@/Layout.jsx";
 import Dashboard from "@/Pages/Dashboard.jsx";
 import Markets from "@/Pages/Markets.jsx";
+import News from "@/Pages/News.jsx";
 import Watchlist from "@/Pages/Watchlist.jsx";
 import Portfolio from "@/Pages/Portfolio.jsx";
 import NewsList from "@/Components/News/NewsList.jsx";
@@ -14,6 +15,7 @@ export default function App() {
       <Route path="/" element={<Layout />} >
         <Route path="dashboard" element={<Dashboard />} />
         <Route path="markets" element={<Markets />} />
+        <Route path="news" element={<News />} />
         <Route path="watchlist" element={<Watchlist />} />
         <Route path="portfolio" element={<Portfolio />} />
         <Route path="news" element={<NewsList />} />

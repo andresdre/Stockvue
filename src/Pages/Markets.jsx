@@ -20,6 +20,7 @@ const stockData = [
     marketCap: "2.95T",
     sector: "Technology"
   },
+
   {
     symbol: "GOOGL",
     name: "Alphabet Inc.",
@@ -30,6 +31,7 @@ const stockData = [
     marketCap: "1.83T",
     sector: "Technology"
   },
+  
   {
     symbol: "MSFT",
     name: "Microsoft Corporation",
@@ -40,6 +42,7 @@ const stockData = [
     marketCap: "2.81T",
     sector: "Technology"
   },
+  
   {
     symbol: "AMZN",
     name: "Amazon.com Inc.",
@@ -50,6 +53,7 @@ const stockData = [
     marketCap: "1.65T",
     sector: "Consumer Discretionary"
   },
+  
   {
     symbol: "TSLA",
     name: "Tesla Inc.",
@@ -60,6 +64,7 @@ const stockData = [
     marketCap: "638.9B",
     sector: "Consumer Discretionary"
   },
+  
   {
     symbol: "NVDA",
     name: "NVIDIA Corporation",

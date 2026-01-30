@@ -1,25 +1,26 @@
 import React from "react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/Components/ui/card.jsx";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
-import { useLiveSP500 } from "@/Components/Hooks/useLiveSP500";
+import { createChart } from 'lightweight-charts';
+import { useLiveSP500 } from "@/Components/Hooks/useLiveSP500.ts";
 import { motion } from "framer-motion";
 
-import Spinner from "../../Components/Spinner";
+import Spinner from "@/Components/Spinner.jsx";
 
-// const chartData = [
-//   { time: "9:30", value: 4575.20 },
-//   { time: "10:00", value: 4578.45 },
-//   { time: "10:30", value: 4582.10 },
-//   { time: "11:00", value: 4579.85 },
-//   { time: "11:30", value: 4585.30 },
-//   { time: "12:00", value: 4587.18 },
-//   { time: "12:30", value: 4589.45 },
-//   { time: "13:00", value: 4591.20 },
-//   { time: "13:30", value: 4587.85 },
-//   { time: "14:00", value: 4592.10 },
-//   { time: "14:30", value: 4594.75 },
-//   { time: "15:00", value: 4596.30 },
-// ];
+const chartData = [
+  { time: "9:30", value: 4575.20 },
+  { time: "10:00", value: 4578.45 },
+  { time: "10:30", value: 4582.10 },
+  { time: "11:00", value: 4579.85 },
+  { time: "11:30", value: 4585.30 },
+  { time: "12:00", value: 4587.18 },
+  { time: "12:30", value: 4589.45 },
+  { time: "13:00", value: 4591.20 },
+  { time: "13:30", value: 4587.85 },
+  { time: "14:00", value: 4592.10 },
+  { time: "14:30", value: 4594.75 },
+  { time: "15:00", value: 4596.30 },
+];
 
 export default function MarketChart() {
   const chartData = useLiveSP500();

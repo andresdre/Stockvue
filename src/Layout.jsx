@@ -3,7 +3,8 @@ import { Link, useLocation, } from "react-router-dom";
 import { Outlet } from "react-router-dom";
 import { createPageUrl } from "@/utils";
 import { BarChart3, TrendingUp, Briefcase, Eye, Search, Bell, Settings, Sun, Moon, Newspaper } from "lucide-react";
-import { Sidebar, SidebarContent, SidebarGroup, SidebarGroupContent, SidebarGroupLabel, SidebarMenu, SidebarMenuButton, SidebarMenuItem, SidebarHeader, SidebarFooter, SidebarProvider, SidebarTrigger } from "@/Components/ui/sidebar.jsx";
+import { Sidebar, SidebarContent, SidebarGroup, SidebarGroupContent, SidebarGroupLabel, SidebarMenu,
+         SidebarMenuButton, SidebarMenuItem, SidebarHeader, SidebarFooter, SidebarProvider, SidebarTrigger } from "@/Components/ui/sidebar.jsx";
 import { Button } from "@/Components/ui/button.jsx";
 
 const navigationItems = [
@@ -12,21 +13,25 @@ const navigationItems = [
     url: createPageUrl("Dashboard"),
     icon: BarChart3,
   },
+
   {
     title: "Markets",
     url: createPageUrl("Markets"),
     icon: TrendingUp,
   },
+  
   {
     title: "Portfolio",
     url: createPageUrl("Portfolio"),
     icon: Briefcase,
   },
+  
   {
     title: "Watchlist",
     url: createPageUrl("Watchlist"),
     icon: Eye,
   },
+  
   {
     title: "News",
     url: createPageUrl("News"),

@@ -1,9 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Card, CardContent } from '@/components/ui/card';
+import { Card, CardContent } from '@/Components/ui/card';
 import { ExternalLink, Calendar, Landmark } from 'lucide-react';
 import { formatDistanceToNow } from 'date-fns';
-import News from '../../Entities/News';
+import { News } from "@/Entities/News.jsx";
 
 export default function NewsList({ newsItems, title }) {
   return (
