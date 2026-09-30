@@ -20,7 +20,7 @@ SidebarMenuButton.propTypes = {
 
 export const Sidebar = ({ children, className = "", ...props }) => {
   return (
-    <aside className={`w-64 bg-white border-r ${className}`} {...props}>
+    <aside className={`w-64 bg-white border-r flex flex-col ${className}`} {...props}>
       {children}
     </aside>
   );
@@ -48,7 +48,7 @@ export const SidebarFooter = ({ children, className = "", ...props }) => (
 SidebarFooter.propTypes = { children: PropTypes.node, className: PropTypes.string };
 
 export const SidebarContent = ({ children, className = "", ...props }) => (
-  <div className={`p-4 overflow-auto ${className}`} {...props}>
+  <div className={`flex-1 p-4 overflow-auto ${className}`} {...props}>
     {children}
   </div>
 
@@ -96,9 +96,9 @@ export const SidebarMenuItem = ({ children, className = "", ...props }) => (
 SidebarMenuItem.propTypes = { children: PropTypes.node, className: PropTypes.string };
 
 export const SidebarProvider = ({ children, className = "", ...props }) => (
-<div className={`px-3 py-2 rounded hover:bg-gray-100 ${className}`} {...props}>
-  {children}
-</div>
+  <div className={`flex w-full h-screen ${className}`} {...props}>
+    {children}
+  </div>
 );
 
 SidebarProvider.propTypes = { children: PropTypes.node, className: PropTypes.string };

@@ -11,13 +11,13 @@ import MarketChart from "@/Components/Dashboard/MarketChart.jsx";
 export default function Dashboard() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
-      <div className="max-w-7xl mx-auto p-6">
+      <div className="w-full p-6">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-8 gap-4"
+          className="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-8 gap-4 px-4"
         >
-          <div>
+          <div className="flex-1">
             <h1 className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-2">
               Market Dashboard
             </h1>
@@ -37,9 +37,11 @@ export default function Dashboard() {
           </div>
         </motion.div>
 
-        <MarketOverview />
+        <div className="px-4 mb-8">
+          <MarketOverview />
+        </div>
 
-        <div className="grid lg:grid-cols-3 gap-6 mb-8">
+        <div className="grid lg:grid-cols-3 gap-6 mb-8 px-4">
           <div className="lg:col-span-2">
             <MarketChart />
           </div>
@@ -94,7 +96,9 @@ export default function Dashboard() {
           </motion.div>
         </div>
 
-        <TopMovers />
+        <div className="px-4">
+          <TopMovers />
+        </div>
       </div>
     </div>
   );

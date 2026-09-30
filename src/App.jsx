@@ -1,5 +1,5 @@
 // src/App.jsx
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import Layout from "@/Layout.jsx";
 import Dashboard from "@/Pages/Dashboard.jsx";
 import Markets from "@/Pages/Markets.jsx";
@@ -13,12 +13,12 @@ export default function App() {
   return (
     <Routes>
       <Route path="/" element={<Layout />} >
+        <Route index element={<Navigate to="/dashboard" replace />} />
         <Route path="dashboard" element={<Dashboard />} />
         <Route path="markets" element={<Markets />} />
         <Route path="news" element={<News />} />
         <Route path="watchlist" element={<Watchlist />} />
         <Route path="portfolio" element={<Portfolio />} />
-        <Route path="news" element={<NewsList />} />
         <Route path="stock-details" element={<StockDetails />} />
       </Route>
     </Routes>

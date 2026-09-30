@@ -39,7 +39,7 @@ const navigationItems = [
   },
 ];
 
-export default function Layout({ asChild, children, currentPageName, ...rest }) {
+export default function Layout() {
   const location = useLocation();
   const [darkMode, setDarkMode] = React.useState(false);
 
@@ -177,7 +177,7 @@ export default function Layout({ asChild, children, currentPageName, ...rest }) 
           </SidebarFooter>
         </Sidebar>
 
-        <main className="flex-1 flex flex-col bg-gray-50 dark:bg-gray-900">
+        <main className="flex-1 flex flex-col bg-gray-50 dark:bg-gray-900 w-full overflow-x-hidden">
           <header className="bg-white dark:bg-slate-900 border-b border-gray-200 dark:border-gray-800 px-6 py-4 md:hidden">
             <div className="flex items-center justify-between">
               <SidebarTrigger className="hover:bg-gray-100 dark:hover:bg-gray-800 p-2 rounded-lg transition-colors duration-200" />
@@ -188,8 +188,8 @@ export default function Layout({ asChild, children, currentPageName, ...rest }) 
             </div>
           </header>
 
-          <div className="flex-1 overflow-auto">
-            {children}
+          <div className="flex-1 overflow-auto w-full">
+            <Outlet />
           </div>
         </main>
       </div>

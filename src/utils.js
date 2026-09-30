@@ -1,7 +1,8 @@
 // src/utils.js
 export function createPageUrl(base, params = {}) {
     const query = new URLSearchParams(params).toString();
-    return query ? `${base}?${query}` : base;
+    const path = base.toLowerCase();
+    return query ? `/${path}?${query}` : `/${path}`;
   }
   
   export function formatNumber(value, decimals = 2) {

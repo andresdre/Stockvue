@@ -1,6 +1,6 @@
 import React from 'react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Progress } from '@/components/ui/progress';
+import { Card, CardContent, CardHeader, CardTitle } from '@/Components/ui/card';
+import { Progress } from '@/Components/ui/progress';
 
 export default function AnalystRatings() {
   const ratings = {
